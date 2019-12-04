@@ -40,7 +40,7 @@
 #import "ManualHelper.h"
 #import "ManualPage.h"
 
-static ManualHelper * __sharedInstance = nil;
+static ManualHelper * __strong __sharedInstance = nil;
 
 @implementation ManualHelper
 
@@ -129,7 +129,7 @@ static ManualHelper * __sharedInstance = nil;
 
 - ( void )getAllManualPages
 {
-    //NSLOG_FUNCNAME;
+    NSLOG_FUNCNAME;
     
     NSTask              * task;
     NSPipe              * p;

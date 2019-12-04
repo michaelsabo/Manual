@@ -44,7 +44,7 @@
 
 - ( void )didEndSheet: ( NSWindow * )sheet returnCode: ( NSInteger )returnCode contextInfo: ( void * )contextInfo
 {
-    //NSLOG_FUNCNAME;
+    NSLOG_FUNCNAME;
     ( void )sheet;
     ( void )returnCode;
     ( void )contextInfo;
@@ -54,7 +54,7 @@
 
 - ( void )sectionsMenuSelectionDidChange: ( id )sender
 {
-    //NSLOG_FUNCNAME;
+    NSLOG_FUNCNAME;
     
     ( void )sender;
     
@@ -71,7 +71,7 @@
 
 - ( void )mainWindowDidResize: ( NSNotification * )notification
 {
-    //NSLOG_FUNCNAME;
+    NSLOG_FUNCNAME;
     
     [ self outlineViewSelectionDidChange: notification ];
 }

@@ -41,17 +41,28 @@
 #import "SearchFieldProtocol.h"
 
 @implementation SearchField
+@synthesize searchDelegate = _searchDelegate;
+
+- (id)init {
+  if( ( self = [ super init ] ) )
+      {
+    _searchDelegate = self.delegate;
+      }
+  
+  return self;
+}
 
 - ( void )textDidChange: ( NSNotification * )notification
 {
     //NSLOG_FUNCNAME;
     
     ( void )notification;
-    
-    if( self.delegate != nil && [ self.delegate respondsToSelector: @selector( searchFieldValueDidChange: ) ] )
+  if (self.searchDelegate != nil) {
+    if([ _searchDelegate respondsToSelector: @selector( searchFieldValueDidChange: ) ])
     {
-        [ self.delegate performSelector: @selector( searchFieldValueDidChange: ) ];
+        [ _searchDelegate performSelector: @selector( searchFieldValueDidChange: ) ];
     }
+  }
 }
 
 @end

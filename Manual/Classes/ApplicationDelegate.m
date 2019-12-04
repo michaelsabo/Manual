@@ -54,7 +54,7 @@
 
 - ( void )applicationDidFinishLaunching: ( NSNotification * )notification
 {
-    //NSLOG_FUNCNAME;
+    NSLOG_FUNCNAME;
     
     //TODO006 - attempt to stop right margin truncation when printed
     //TODO007 - setVerticalPagination needed to be NSAutoPagination

@@ -35,6 +35,8 @@
 
 @interface SearchField: NSSearchField
 {
+  id<NSSearchFieldDelegate> __strong _searchDelegate;
+  
 @protected
     
     
@@ -43,5 +45,5 @@
     
     id _SearchField_Reserved[ 5 ] __attribute__( ( unused ) );
 }
-
+@property( atomic, readwrite, retain ) id<NSSearchFieldDelegate>  searchDelegate;
 @end
